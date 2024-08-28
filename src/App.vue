@@ -4,6 +4,8 @@ import HeroView from './components/HeroView.vue'
 import PersonaView from './components/PersonaView.vue'
 import TodoItemView from './components/TodoItemView.vue'
 import ButtonView from './components/ButtonView.vue'
+import CardView from './components/CardView.vue'
+
 export default {
   data() {
     return {
@@ -24,7 +26,8 @@ export default {
     HeroView,
     PersonaView,
     TodoItemView,
-    ButtonView
+    ButtonView,
+    CardView
   },
   methods: {
     eliminarTarea(index) {
@@ -50,12 +53,20 @@ export default {
     </div>
   </section>
 
-  <section>
+   <section>
     <ButtonView>
       <h3>Este es un slot</h3>
     </ButtonView>
   </section>
-    
+
+
+  <CardView imagen="https://via.placeholder.com/300">
+    <h1>Mi Título</h1>
+    <p>
+      Esta es una breve descripción de la tarjeta.
+    </p>
+    <button>Ver Más</button>
+  </CardView>
 </template>
 
 <style scoped>
