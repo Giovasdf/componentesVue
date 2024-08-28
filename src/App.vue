@@ -3,6 +3,7 @@ import HeaderView from './components/HeaderView.vue'
 import HeroView from './components/HeroView.vue'
 import PersonaView from './components/PersonaView.vue'
 import TodoItemView from './components/TodoItemView.vue'
+import ButtonView from './components/ButtonView.vue'
 export default {
   data() {
     return {
@@ -22,7 +23,8 @@ export default {
     HeaderView,
     HeroView,
     PersonaView,
-    TodoItemView
+    TodoItemView,
+    ButtonView
   },
   methods: {
     eliminarTarea(index) {
@@ -47,6 +49,13 @@ export default {
       <TodoItemView :tarea="tarea" @eliminarTarea="eliminarTarea(index)" />
     </div>
   </section>
+
+  <section>
+    <ButtonView>
+      <h3>Este es un slot</h3>
+    </ButtonView>
+  </section>
+    
 </template>
 
 <style scoped>
