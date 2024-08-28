@@ -5,6 +5,7 @@
         class="avatar"></div>
         <h2>{{nombre}}</h2>
         <p>{{descripcion}}</p>
+        <button @click="$emit('eliminarPersona')">Eliminar</button>
     </div>
 </template>
 
